@@ -1,0 +1,129 @@
+:root {
+  --ff-all:'Staatliches', cursive;
+  --ff-p:'Palanquin', sans-serif;
+  font-size: 62.5%;
+  --hd-bg-color: hsl(218, 17%, 62%);
+  --pg-bg-color: hsl(233, 100%, 97%);
+  --h1-bg-color:hsl(275, 18%, 79%);
+  --p-color:hsl(274, 84%, 12%);
+  --span-bg-color:hsl(312, 91%, 96%);
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--ff-p);
+  background: hsla(233, 100%, 97%, 1);
+}
+
+h1{ 
+  font-size: 4rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  -webkit-font-snoothing: antialiased;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+h1, span {
+  font-family: var(--ff-all);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 3.4rem;
+
+}
+
+header {
+  background: var(--hd-bg-color);
+  display: grid;
+  padding: 3.2rem auto;
+  place-items: center;
+}
+
+.logo-header {
+  padding: 3.2rem 0;
+}
+
+.title {
+  background: var(--h1-bg-color);
+  margin-bottom: 2.9rem;  
+  padding: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 3.2rem 6rem;
+}
+
+.text {
+  font-family: --ff-p;
+  text-align: center;
+  width: 31.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #23053a;
+  -webkit-font-snoothing: antialiased;
+}
+
+.cards {
+  display: grid;
+  gap: 3.2rem;
+  margin-top: 5rem;
+}
+.cards .card {
+  position: relative;
+  width: 32rem;
+  height: auto;
+}
+
+.cards .card span {
+  font-size: 2rem;
+  color: #4A4E69;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  background: var(--span-bg-color);
+  border-radius: 2rem;
+  width: 11.2rem;
+  text-align: center;
+
+animation: topdown 700ms 350ms backwards;
+}
+
+.cards .card img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2rem;
+  animation: downtop 550ms;
+}
+
+@keyframes topdown {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+0% {
+  transform: translateY(15px);
+  opacity: 0;
+}
+100%{
+  transform: translateY(0);
+  opacity: 1;
+
+}
+}
